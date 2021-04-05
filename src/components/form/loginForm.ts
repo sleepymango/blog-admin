@@ -1,14 +1,14 @@
-import { reactive } from 'vue'
-import { User, Rules } from '@/components/types'
+import { ref } from 'vue'
+import { User, LoginRules } from '@/components/types'
 
 //  登录用户
-export const loginUser = reactive<User>({
+export const loginUser = ref<User>({
   username: '',
   password: '',
 })
 
 // 表单校验规则
-export const rules = reactive<Rules>({
+export const rules = ref<LoginRules>({
   username: [
     {
       required: true,
